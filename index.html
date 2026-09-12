@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platos de la semana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <p class="kicker">Cocina para la semana</p>
+      <h1 id="week-title" class="week-title">Cargando…</h1>
+      <p class="intro">Cinco platos pensados para cocinar de una vez y comer bien el resto de la semana — pasta, carne, arroz, pescado y uno libre, con ingredientes fáciles de encontrar en Mallorca.</p>
+    </div>
+  </header>
+
+  <main id="dishes" class="dishes"></main>
+
+  <template id="dish-template">
+    <article class="dish">
+      <div class="dish-tag">
+        <span class="dish-dot"></span>
+        <span class="dish-category"></span>
+      </div>
+      <h2 class="dish-name"></h2>
+      <p class="dish-description"></p>
+      <div class="dish-meta">
+        <span class="dish-time"></span>
+        <span class="dish-servings"></span>
+      </div>
+      <p class="dish-batch"></p>
+      <div class="dish-body">
+        <div class="dish-ingredients">
+          <h3>Ingredientes</h3>
+          <ul class="ingredients-list"></ul>
+        </div>
+        <div class="dish-steps">
+          <h3>Elaboración</h3>
+          <ol class="steps-list"></ol>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <template id="empty-template">
+    <div class="empty">
+      <p>Todavía no hay menú para esta semana.</p>
+      <p class="empty-sub">Vuelve el jueves por la mañana.</p>
+    </div>
+  </template>
+
+  <footer class="site-footer">
+    <p>Se actualiza solo cada jueves.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

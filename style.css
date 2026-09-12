@@ -1,0 +1,243 @@
+:root {
+  --paper: #ece7d6;
+  --paper-card: #f5f1e4;
+  --ink: #2b2a22;
+  --ink-soft: #6b6754;
+  --rule: #d8d0b8;
+
+  --c-pasta: #b98a1f;
+  --c-carne: #b5442e;
+  --c-arroz: #c9701a;
+  --c-pescado: #3e6e82;
+  --c-libre: #5c7048;
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: light; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Work Sans", system-ui, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  padding: 4.5rem 1.5rem 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.masthead-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.week-title {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+}
+
+.intro {
+  max-width: 46ch;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.dishes {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.dish {
+  padding: 3rem 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.dish:last-child {
+  border-bottom: none;
+}
+
+.dish-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.dish-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--dot-color, var(--ink-soft));
+  flex-shrink: 0;
+}
+
+.dish-category {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+.dish-name {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.6vw, 2.1rem);
+  margin: 0 0 0.5rem;
+  line-height: 1.15;
+}
+
+.dish-description {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+.dish-meta {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+}
+
+.dish-batch {
+  background: var(--paper-card);
+  border-left: 3px solid var(--dot-color, var(--ink-soft));
+  padding: 0.8rem 1rem;
+  margin: 0 0 1.75rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.dish-batch:empty {
+  display: none;
+}
+
+.dish-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.dish-body h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ingredients-list li {
+  padding: 0.3rem 0 0.3rem 1.1rem;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.96rem;
+}
+
+.ingredients-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--dot-color, var(--ink-soft));
+}
+
+.steps-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps-list li {
+  counter-increment: step;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.96rem;
+}
+
+.steps-list li::before {
+  content: counter(step);
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  color: var(--dot-color, var(--ink-soft));
+  flex-shrink: 0;
+  width: 1.4rem;
+  text-align: right;
+}
+
+@media (min-width: 640px) {
+  .dish-body {
+    grid-template-columns: 1fr 1.3fr;
+  }
+}
+
+.empty {
+  padding: 4rem 0;
+  text-align: left;
+  color: var(--ink-soft);
+}
+
+.empty p {
+  margin: 0.3rem 0;
+  font-size: 1.05rem;
+}
+
+.empty-sub {
+  font-size: 0.95rem !important;
+}
+
+.site-footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 3rem;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dish {
+    animation: rise 0.5s ease both;
+  }
+  .dish:nth-child(1) { animation-delay: 0.02s; }
+  .dish:nth-child(2) { animation-delay: 0.08s; }
+  .dish:nth-child(3) { animation-delay: 0.14s; }
+  .dish:nth-child(4) { animation-delay: 0.2s; }
+  .dish:nth-child(5) { animation-delay: 0.26s; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+:focus-visible {
+  outline: 2px solid var(--c-pescado);
+  outline-offset: 3px;
+}
