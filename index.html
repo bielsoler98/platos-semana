@@ -21,30 +21,35 @@
   <main id="dishes" class="dishes"></main>
 
   <template id="dish-template">
-    <article class="dish">
-      <div class="dish-tag">
-        <span class="dish-dot"></span>
-        <span class="dish-category"></span>
-      </div>
-      <h2 class="dish-name"></h2>
-      <p class="dish-description"></p>
-      <div class="dish-meta">
-        <span class="dish-time"></span>
-        <span class="dish-servings"></span>
-      </div>
-      <p class="dish-batch"></p>
-      <div class="dish-body">
-        <div class="dish-ingredients">
-          <h3>Ingredientes</h3>
-          <ul class="ingredients-list"></ul>
+    <details class="dish">
+      <summary class="dish-summary">
+        <h2 class="dish-name"></h2>
+        <span class="dish-chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="dish-content">
+        <div class="dish-tag">
+          <span class="dish-dot"></span>
+          <span class="dish-category"></span>
         </div>
-        <div class="dish-steps">
-          <h3>Elaboración</h3>
-          <ol class="steps-list"></ol>
+        <p class="dish-description"></p>
+        <div class="dish-meta">
+          <span class="dish-time"></span>
+          <span class="dish-servings"></span>
         </div>
+        <p class="dish-batch"></p>
+        <div class="dish-body">
+          <div class="dish-ingredients">
+            <h3>Ingredientes</h3>
+            <ul class="ingredients-list"></ul>
+          </div>
+          <div class="dish-steps">
+            <h3>Elaboración</h3>
+            <ol class="steps-list"></ol>
+          </div>
+        </div>
+        <img class="dish-image" alt="">
       </div>
-      <img class="dish-image" alt="">
-    </article>
+    </details>
   </template>
 
   <template id="empty-template">
@@ -61,4 +66,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-<!-- deploy-test 17:40:21 -->

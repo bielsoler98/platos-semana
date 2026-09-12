@@ -29,10 +29,10 @@ function formatWeekTitle(weekOf) {
 function renderDish(dish) {
   const tpl = document.getElementById("dish-template");
   const node = tpl.content.cloneNode(true);
-  const article = node.querySelector(".dish");
+  const details = node.querySelector(".dish");
 
   const color = CATEGORY_COLORS[dish.category] || "var(--ink-soft)";
-  article.style.setProperty("--dot-color", color);
+  details.style.setProperty("--dot-color", color);
 
   node.querySelector(".dish-category").textContent =
     CATEGORY_LABELS[dish.category] || dish.category || "";

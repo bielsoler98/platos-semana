@@ -65,12 +65,52 @@ body {
 }
 
 .dish {
-  padding: 3rem 0;
   border-bottom: 1px dashed var(--rule);
+  border-left: 3px solid var(--dot-color, var(--ink-soft));
+  padding-left: 1.1rem;
+  margin-left: -1.1rem;
 }
 
 .dish:last-child {
   border-bottom: none;
+}
+
+.dish-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 1.6rem 0;
+}
+
+.dish-summary::-webkit-details-marker {
+  display: none;
+}
+
+.dish-summary .dish-name {
+  margin: 0;
+}
+
+.dish-chevron {
+  flex-shrink: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid var(--ink-soft);
+  border-bottom: 2px solid var(--ink-soft);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+  margin-right: 0.4rem;
+}
+
+.dish[open] .dish-chevron {
+  transform: rotate(45deg);
+}
+
+.dish-content {
+  padding-top: 0.25rem;
+  padding-bottom: 2.5rem;
 }
 
 .dish-tag {
