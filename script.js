@@ -65,6 +65,14 @@ function renderDish(dish) {
     stepsList.appendChild(li);
   });
 
+  const img = node.querySelector(".dish-image");
+  if (dish.image_url) {
+    img.src = dish.image_url;
+    img.alt = dish.name || "";
+  } else {
+    img.remove();
+  }
+
   return node;
 }
 

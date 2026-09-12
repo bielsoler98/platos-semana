@@ -18,10 +18,11 @@ Web estática que muestra 5 platos para cocinar en batch cada semana. Se actuali
       "name": "Nombre del plato",
       "description": "1-2 frases describiendo el plato.",
       "prep_time_minutes": 25,
-      "servings": 4,
+      "servings": 2,
       "ingredients": ["...", "..."],
       "steps": ["...", "..."],
-      "batch_cooking_notes": "Cómo se conserva / cómo repartirlo para la semana."
+      "batch_cooking_notes": "Cómo se conserva / cómo repartirlo para la semana.",
+      "image_url": "URL de una foto del plato ya cocinado, o cadena vacía si no se encontró ninguna"
     }
   ]
 }
@@ -33,3 +34,5 @@ Requisitos de contenido (los aplica la rutina programada al generar el JSON):
 - Recetas simples y rápidas, pensadas para cocinar varias de golpe (batch cooking).
 - Ingredientes fáciles de encontrar en supermercados de Mallorca, España.
 - Receta completa: ingredientes con cantidades y pasos de elaboración detallados.
+- Cantidades siempre para 2 personas (`servings` siempre a `2`).
+- Cada plato lleva una foto del resultado final en `image_url` (buscada en Wikimedia Commons, ver prompt de la rutina).

@@ -198,6 +198,21 @@ body {
   }
 }
 
+.dish-image {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-top: 2rem;
+  border: 1px solid var(--rule);
+}
+
+.dish-image:not([src]),
+.dish-image[src=""] {
+  display: none;
+}
+
 .empty {
   padding: 4rem 0;
   text-align: left;

@@ -6,19 +6,20 @@
       "name": "Ejemplo: Pasta al pesto con pollo",
       "description": "Pasta corta con pesto casero, pollo a la plancha y tomates cherry.",
       "prep_time_minutes": 25,
-      "servings": 4,
+      "servings": 2,
       "ingredients": [
-        "400g pasta corta",
-        "200g pechuga de pollo",
-        "100g pesto",
-        "150g tomates cherry"
+        "200g pasta corta",
+        "150g pechuga de pollo",
+        "60g pesto",
+        "100g tomates cherry"
       ],
       "steps": [
         "Cuece la pasta según el paquete.",
         "Cocina el pollo a la plancha y trocea.",
         "Mezcla todo con el pesto y los tomates."
       ],
-      "batch_cooking_notes": "Se conserva bien 3-4 días en la nevera en un táper hermético."
+      "batch_cooking_notes": "Se conserva bien 3-4 días en la nevera en un táper hermético.",
+      "image_url": ""
     }
   ]
 }
