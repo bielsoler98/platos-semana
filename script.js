@@ -67,6 +67,10 @@ function renderDish(dish) {
 
   const img = node.querySelector(".dish-image");
   if (dish.image_url) {
+    // The image URL is never fetched or validated server-side, so a broken
+    // or unreachable one is expected occasionally — hide it rather than
+    // showing a broken-image icon.
+    img.addEventListener("error", () => img.remove(), { once: true });
     img.src = dish.image_url;
     img.alt = dish.name || "";
   } else {

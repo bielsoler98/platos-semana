@@ -35,4 +35,4 @@ Requisitos de contenido (los aplica la rutina programada al generar el JSON):
 - Ingredientes fáciles de encontrar en supermercados de Mallorca, España.
 - Receta completa: ingredientes con cantidades y pasos de elaboración detallados.
 - Cantidades siempre para 2 personas (`servings` siempre a `2`).
-- Cada plato lleva una foto del resultado final en `image_url` (buscada en Wikimedia Commons, ver prompt de la rutina).
+- Cada plato lleva una foto del resultado final en `image_url` si se encuentra una URL de imagen directa razonable (ver prompt de la rutina); si no, se deja vacía — la web la oculta sola si no carga, así que nunca inventes una URL.
