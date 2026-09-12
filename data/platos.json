@@ -1,24 +1,149 @@
 {
-  "week_of": "2026-09-14",
+  "week_of": "2026-09-07",
   "dishes": [
     {
       "category": "pasta",
-      "name": "Ejemplo: Pasta al pesto con pollo",
-      "description": "Pasta corta con pesto casero, pollo a la plancha y tomates cherry.",
+      "name": "Pasta con atún, tomate y aceitunas",
+      "description": "Pasta corta con una salsa rápida de tomate, atún y aceitunas negras, lista en un solo sofrito.",
       "prep_time_minutes": 25,
       "servings": 2,
       "ingredients": [
-        "200g pasta corta",
-        "150g pechuga de pollo",
-        "60g pesto",
-        "100g tomates cherry"
+        "180 g de pasta corta (macarrones o fusilli)",
+        "1 lata de atún en aceite de oliva (unos 80 g escurrido)",
+        "250 g de tomate triturado",
+        "40 g de aceitunas negras sin hueso",
+        "1 diente de ajo",
+        "1/2 cebolla",
+        "2 cucharadas de aceite de oliva virgen extra",
+        "Sal, pimienta y orégano al gusto"
       ],
       "steps": [
-        "Cuece la pasta según el paquete.",
-        "Cocina el pollo a la plancha y trocea.",
-        "Mezcla todo con el pesto y los tomates."
+        "Pon una olla grande con agua y sal a calentar para la pasta.",
+        "Mientras el agua rompe a hervir, pica la cebolla y el ajo bien finos.",
+        "En una sartén con el aceite, sofríe la cebolla y el ajo a fuego medio 5-6 minutos hasta que estén blandos.",
+        "Cuando el agua hierva, echa la pasta y cuécela el tiempo indicado en el paquete, removiendo de vez en cuando.",
+        "Añade el tomate triturado al sofrito y cocina 8-10 minutos a fuego medio-bajo, removiendo de vez en cuando.",
+        "Escurre el atún y añádelo a la salsa junto con las aceitunas troceadas. Salpimienta, añade el orégano y cocina 2-3 minutos más.",
+        "Escurre la pasta y mézclala con la salsa, removiendo bien para que se integre todo."
       ],
-      "batch_cooking_notes": "Se conserva bien 3-4 días en la nevera en un táper hermético.",
+      "batch_cooking_notes": "Se conserva 3-4 días en la nevera en un táper hermético. Congela bien hasta 2 meses; reparte en raciones individuales antes de congelar y recalienta con un chorrito de agua para que no quede seca.",
+      "image_url": ""
+    },
+    {
+      "category": "carne",
+      "name": "Albóndigas en salsa de tomate",
+      "description": "Albóndigas caseras de carne picada mixta, doradas y cocinadas a fuego lento en una salsa de tomate y cebolla.",
+      "prep_time_minutes": 35,
+      "servings": 2,
+      "ingredients": [
+        "300 g de carne picada mixta (cerdo y ternera)",
+        "1 huevo",
+        "30 g de pan rallado",
+        "1 diente de ajo picado",
+        "Un puñado de perejil fresco picado",
+        "400 g de tomate triturado",
+        "1/2 cebolla",
+        "2 cucharadas de aceite de oliva",
+        "2 cucharadas de harina para rebozar",
+        "Sal, pimienta y una pizca de nuez moscada"
+      ],
+      "steps": [
+        "En un bol, mezcla la carne picada con el huevo, el pan rallado, el ajo picado, el perejil, sal, pimienta y nuez moscada. Amasa bien.",
+        "Forma bolitas del tamaño de una nuez con las manos húmedas y pásalas ligeramente por harina.",
+        "Calienta el aceite en una sartén y dora las albóndigas por todos los lados, 4-5 minutos (no hace falta que se hagan del todo por dentro). Resérvalas en un plato.",
+        "En la misma sartén, pica y sofríe la cebolla 5 minutos hasta que esté transparente.",
+        "Añade el tomate triturado, sal y medio vaso de agua, y cocina 5 minutos.",
+        "Incorpora las albóndigas a la salsa, tapa y cocina a fuego bajo 15-18 minutos, dando la vuelta a mitad de cocción, hasta que estén hechas por dentro."
+      ],
+      "batch_cooking_notes": "Aguanta 3-4 días en la nevera en un táper cerrado; la salsa mejora de sabor de un día para otro. Congela perfectamente hasta 3 meses ya con la salsa, en raciones individuales.",
+      "image_url": ""
+    },
+    {
+      "category": "arroz",
+      "name": "Arroz tres delicias",
+      "description": "Clásico arroz salteado con jamón york, huevo, guisantes y zanahoria, al estilo wok.",
+      "prep_time_minutes": 30,
+      "servings": 2,
+      "ingredients": [
+        "200 g de arroz redondo o largo",
+        "2 huevos",
+        "80 g de guisantes (pueden ser congelados)",
+        "1 zanahoria",
+        "100 g de jamón york en taquitos",
+        "2 cucharadas de salsa de soja",
+        "2 cucharadas de aceite de oliva o de girasol",
+        "Sal"
+      ],
+      "steps": [
+        "Cuece el arroz en agua con sal según el tiempo indicado en el paquete. Cuando esté listo, escúrrelo, pásalo por agua fría y extiéndelo en una bandeja para que se enfríe y suelte.",
+        "Mientras se cuece el arroz, pela y corta la zanahoria en dados pequeños y cuécela 5 minutos en agua o al vapor hasta que esté tierna. Si usas guisantes congelados, cuécelos 3-4 minutos.",
+        "Bate los huevos con una pizca de sal y hazlos en la sartén como una tortilla fina; retira y trocea en trozos pequeños.",
+        "En una sartén o wok grande con el aceite, saltea el jamón en taquitos 1-2 minutos.",
+        "Añade la zanahoria y los guisantes escurridos y saltea 2 minutos más.",
+        "Incorpora el arroz frío y saltea a fuego fuerte 3-4 minutos, removiendo sin parar.",
+        "Añade el huevo troceado y la salsa de soja, mezcla bien y cocina 1-2 minutos más."
+      ],
+      "batch_cooking_notes": "Se conserva 3 días en la nevera en un táper hermético; al recalentar añade unas gotas de agua para que no quede seco. No es el mejor plato para congelar (el arroz y el huevo cambian de textura), mejor consumirlo esa misma semana.",
+      "image_url": ""
+    },
+    {
+      "category": "pescado",
+      "name": "Salmón al horno con brócoli y patata",
+      "description": "Lomos de salmón al horno junto con patatas y brócoli asados, con ajo, limón y un toque de pimentón.",
+      "prep_time_minutes": 35,
+      "servings": 2,
+      "ingredients": [
+        "2 lomos de salmón (unos 150 g cada uno)",
+        "300 g de patatas",
+        "250 g de brócoli",
+        "2 cucharadas de aceite de oliva virgen extra",
+        "1 limón",
+        "2 dientes de ajo",
+        "Sal, pimienta y pimentón dulce"
+      ],
+      "steps": [
+        "Precalienta el horno a 200°C.",
+        "Pela y corta las patatas en rodajas no muy gruesas. Colócalas en una bandeja con papel vegetal, con un poco de aceite, sal y pimienta.",
+        "Hornea las patatas solas 15 minutos mientras preparas el resto.",
+        "Lava el brócoli y córtalo en arbolitos pequeños.",
+        "Pasados los 15 minutos, saca la bandeja, añade el brócoli alrededor de las patatas y hornea 10 minutos más.",
+        "Mientras tanto, salpimienta los lomos de salmón, espolvorea un poco de pimentón y lamina el ajo.",
+        "Saca de nuevo la bandeja, haz hueco y coloca los lomos de salmón encima, con el ajo laminado y unas rodajas de limón. Riega con un chorrito de aceite.",
+        "Hornea 12-15 minutos más, hasta que el salmón esté hecho pero jugoso."
+      ],
+      "batch_cooking_notes": "El salmón ya cocinado se conserva 2 días en la nevera (el pescado aguanta menos que la carne); las patatas y el brócoli aguantan 3-4 días. No se recomienda congelar el conjunto ya cocinado; si quieres congelar, congela el salmón crudo por separado.",
+      "image_url": ""
+    },
+    {
+      "category": "libre",
+      "name": "Lentejas estofadas con verduras",
+      "description": "Guiso tradicional de lentejas con zanahoria, patata, pimiento y un sofrito de tomate, ideal para los días fríos.",
+      "prep_time_minutes": 45,
+      "servings": 2,
+      "ingredients": [
+        "250 g de lentejas pardinas",
+        "1 zanahoria",
+        "1 patata",
+        "1/2 cebolla",
+        "1/2 pimiento verde",
+        "1 tomate maduro (o 100 g de tomate triturado)",
+        "1 diente de ajo",
+        "1 hoja de laurel",
+        "2 cucharadas de aceite de oliva virgen extra",
+        "1 cucharadita de pimentón dulce",
+        "750 ml de caldo de verduras o agua",
+        "Sal"
+      ],
+      "steps": [
+        "Pon las lentejas en un colador y lávalas bajo el grifo.",
+        "Pica la cebolla, el ajo, el pimiento y el tomate en trozos pequeños; pela y trocea la zanahoria y la patata en dados.",
+        "En una olla con el aceite, sofríe la cebolla, el ajo y el pimiento 5 minutos a fuego medio.",
+        "Añade el tomate y cocina 3-4 minutos más.",
+        "Incorpora las lentejas, la zanahoria, la patata, el laurel y el pimentón, y remueve un minuto para que se impregnen del sofrito.",
+        "Cubre con el caldo o agua (debe quedar cubierto unos 2 dedos por encima), añade sal y lleva a ebullición.",
+        "Baja el fuego y cocina tapado 35-40 minutos, removiendo de vez en cuando y añadiendo un poco más de agua si se quedan secas, hasta que las lentejas estén tiernas."
+      ],
+      "batch_cooking_notes": "Es uno de los platos que mejor aguanta: 4-5 días en la nevera en un táper hermético, y de un día para otro incluso mejora de sabor. Congela muy bien hasta 3 meses; reparte en raciones individuales antes de congelar.",
       "image_url": ""
     }
   ]
