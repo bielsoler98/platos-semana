@@ -1,8 +1,13 @@
 {
   "name": "platos-semana",
   "compatibility_date": "2026-09-12",
+  "main": "worker.js",
   "assets": {
     "directory": "./",
+    "binding": "ASSETS",
     "not_found_handling": "404-page"
-  }
+  },
+  "kv_namespaces": [
+    { "binding": "FAVORITES", "id": "d2b114991d214c0b9806fce67fe2107d" }
+  ]
 }

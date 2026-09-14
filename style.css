@@ -55,6 +55,44 @@ body {
   max-width: 46ch;
   color: var(--ink-soft);
   font-size: 1.05rem;
+  margin: 0 0 1.5rem;
+}
+
+.favorites-toggle {
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--ink);
+  background: var(--paper-card);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+}
+
+.favorites-toggle:hover {
+  border-color: var(--c-carne);
+}
+
+.favorites {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-card);
+}
+
+.favorites-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.favorites-title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+.favorites-empty {
+  color: var(--ink-soft);
   margin: 0;
 }
 
@@ -177,6 +215,29 @@ body {
   background: var(--paper-card);
   border-radius: 999px;
   padding: 0.3rem 0.8rem;
+}
+
+.dish-save,
+.dish-remove {
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--dot-color, var(--ink));
+  background: transparent;
+  border: 1px solid var(--dot-color, var(--rule));
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}
+
+.dish-save:hover,
+.dish-remove:hover {
+  background: var(--dot-color, var(--paper-card));
+  color: var(--paper);
+}
+
+.dish-save:disabled {
+  cursor: default;
+  opacity: 0.75;
 }
 
 .dish-batch {

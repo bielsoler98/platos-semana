@@ -6,6 +6,16 @@ Web estática que muestra 5 platos para cocinar en batch cada semana. Se actuali
 
 - `index.html`, `style.css`, `script.js` — la web (estática, sin dependencias, sin build).
 - `data/platos.json` — el menú de la semana. Es el único fichero que la rutina programada debe tocar.
+- `worker.js` — Cloudflare Worker: sirve la web estática y expone `/api/favorites` (ver abajo).
+- `wrangler.jsonc` — config del Worker: assets estáticos + binding al KV `FAVORITES`.
+
+## Favoritos
+
+Como `data/platos.json` se sobrescribe entero cada semana, guardar un plato como favorito hace una copia completa de su contenido en un KV namespace de Cloudflare (binding `FAVORITES`), para que sobreviva a futuras actualizaciones del menú. Lista compartida, sin usuarios ni login.
+
+- `GET /api/favorites` — lista de favoritos guardados.
+- `POST /api/favorites` — guarda un plato (body: el objeto del plato). Si ya existe uno con el mismo `name`, no duplica.
+- `DELETE /api/favorites/:id` — quita un favorito por su id.
 
 ## Esquema de `data/platos.json`
 

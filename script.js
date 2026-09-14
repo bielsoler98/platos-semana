@@ -26,7 +26,20 @@ function formatWeekTitle(weekOf) {
   return `Semana del ${d.getDate()} de ${MONTHS_ES[d.getMonth()]}`;
 }
 
-function renderDish(dish) {
+// Fields snapshotted into a favorite so it survives the weekly menu being
+// overwritten — deliberately excludes any id/timestamp the server adds.
+const SNAPSHOT_FIELDS = [
+  "category", "name", "description", "prep_time_minutes", "servings",
+  "ingredients", "steps", "batch_cooking_notes", "image_url",
+];
+
+function dishSnapshot(dish) {
+  const snap = {};
+  SNAPSHOT_FIELDS.forEach((f) => { snap[f] = dish[f]; });
+  return snap;
+}
+
+function renderDish(dish, { mode } = { mode: "weekly" }) {
   const tpl = document.getElementById("dish-template");
   const node = tpl.content.cloneNode(true);
   const details = node.querySelector(".dish");
@@ -81,7 +94,104 @@ function renderDish(dish) {
     hero.remove();
   }
 
+  const saveBtn = node.querySelector(".dish-save");
+  const removeBtn = node.querySelector(".dish-remove");
+
+  if (mode === "favorite") {
+    saveBtn.remove();
+    removeBtn.hidden = false;
+    removeBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      removeBtn.disabled = true;
+      removeBtn.textContent = "Quitando…";
+      await removeFavorite(dish.id);
+    });
+  } else {
+    saveBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      saveBtn.disabled = true;
+      saveBtn.textContent = "Guardando…";
+      const ok = await saveFavorite(dishSnapshot(dish));
+      saveBtn.textContent = ok ? "★ Guardado" : "☆ Guardar";
+      if (!ok) saveBtn.disabled = false;
+    });
+  }
+
   return node;
+}
+
+async function fetchFavorites() {
+  const res = await fetch("/api/favorites", { cache: "no-store" });
+  if (!res.ok) throw new Error("no favorites");
+  return res.json();
+}
+
+async function saveFavorite(dishData) {
+  try {
+    const res = await fetch("/api/favorites", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(dishData),
+    });
+    if (!res.ok) return false;
+    const list = await res.json();
+    renderFavoritesList(list);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function removeFavorite(id) {
+  try {
+    const res = await fetch(`/api/favorites/${encodeURIComponent(id)}`, { method: "DELETE" });
+    if (!res.ok) return;
+    const list = await res.json();
+    renderFavoritesList(list);
+  } catch {
+    /* leave the list as-is on failure */
+  }
+}
+
+function renderFavoritesList(list) {
+  const container = document.getElementById("favorites-list");
+  const emptyMsg = document.getElementById("favorites-empty");
+  const countEl = document.getElementById("favorites-count");
+
+  container.innerHTML = "";
+  emptyMsg.hidden = list.length > 0;
+  countEl.textContent = list.length ? `(${list.length})` : "";
+
+  list.forEach((dish) => container.appendChild(renderDish(dish, { mode: "favorite" })));
+}
+
+async function initFavorites() {
+  const toggle = document.getElementById("favorites-toggle");
+  const section = document.getElementById("favorites-section");
+  let loaded = false;
+
+  try {
+    const list = await fetchFavorites();
+    document.getElementById("favorites-count").textContent = list.length ? `(${list.length})` : "";
+  } catch {
+    /* count stays blank if the API isn't reachable yet */
+  }
+
+  toggle.addEventListener("click", async () => {
+    const opening = section.hidden;
+    section.hidden = !opening;
+    toggle.setAttribute("aria-expanded", String(opening));
+    if (opening && !loaded) {
+      loaded = true;
+      try {
+        renderFavoritesList(await fetchFavorites());
+      } catch {
+        document.getElementById("favorites-empty").hidden = false;
+        document.getElementById("favorites-empty").textContent =
+          "No se han podido cargar los favoritos ahora mismo.";
+      }
+    }
+  });
 }
 
 async function main() {
@@ -113,3 +223,4 @@ async function main() {
 }
 
 main();
+initFavorites();

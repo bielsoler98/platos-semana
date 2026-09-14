@@ -15,8 +15,19 @@
       <p class="kicker">Cocina para la semana</p>
       <h1 id="week-title" class="week-title">Cargando…</h1>
       <p class="intro">Cinco platos pensados para cocinar de una vez y comer bien el resto de la semana — pasta, carne, arroz, pescado y uno libre, con ingredientes fáciles de encontrar en Mallorca.</p>
+      <button id="favorites-toggle" class="favorites-toggle" type="button" aria-expanded="false">
+        ♥ Favoritos <span id="favorites-count"></span>
+      </button>
     </div>
   </header>
+
+  <section id="favorites-section" class="favorites" hidden>
+    <div class="favorites-inner">
+      <h2 class="favorites-title">Favoritos</h2>
+      <p id="favorites-empty" class="favorites-empty" hidden>Aún no has guardado ningún plato — marca uno con "Guardar" para que no se pierda cuando cambie el menú.</p>
+      <div id="favorites-list"></div>
+    </div>
+  </section>
 
   <main id="dishes" class="dishes"></main>
 
@@ -36,6 +47,8 @@
         <div class="dish-meta">
           <span class="dish-time"></span>
           <span class="dish-servings"></span>
+          <button class="dish-save" type="button">☆ Guardar</button>
+          <button class="dish-remove" type="button" hidden>✕ Quitar de favoritos</button>
         </div>
         <p class="dish-batch"></p>
         <div class="dish-body">
