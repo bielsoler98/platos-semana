@@ -33,7 +33,7 @@
         "Sirve con más parmesano rallado y albahaca fresca por encima si se usa."
       ],
       "batch_cooking_notes": "Se conserva en un recipiente hermético en la nevera hasta 3 días; recalienta en sartén a fuego suave con un chorrito de agua o leche para que la salsa no se espese demasiado. Congela bien hasta 2 meses, mejor guardando solo la salsa (sin la pasta) y cociendo pasta fresca al momento de servir.",
-      "image_url": ""
+      "image_url": "https://images.pexels.com/photos/37180268/pexels-photo-37180268.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     },
     {
       "category": "carne",
@@ -67,7 +67,7 @@
         "Sirve el curry sobre el arroz basmati, con cilantro fresco picado por encima."
       ],
       "batch_cooking_notes": "Guarda el curry y el arroz en recipientes separados en la nevera hasta 3 días, así el arroz no se apelmaza. El curry se puede congelar hasta 2 meses; descongela en la nevera y recalienta a fuego suave removiendo, añadiendo un poco de agua o leche de coco si se ha espesado demasiado.",
-      "image_url": ""
+      "image_url": "https://images.pexels.com/photos/31653135/pexels-photo-31653135.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     },
     {
       "category": "arroz",
@@ -100,7 +100,7 @@
         "Retira del fuego, deja reposar 2 minutos y sirve con una cucharada de alioli encima o al lado."
       ],
       "batch_cooking_notes": "Se conserva en la nevera en un recipiente hermético hasta 2-3 días; el marisco lo hace algo más delicado, así que es mejor consumirlo pronto. Al recalentar añade un chorrito de caldo o agua para que no quede seco. No se recomienda congelar por el marisco y la textura del arroz. Guarda el alioli aparte y añádelo justo antes de servir.",
-      "image_url": ""
+      "image_url": "https://images.pexels.com/photos/1484513/pexels-photo-1484513.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     },
     {
       "category": "pescado",
@@ -129,7 +129,7 @@
         "Sirve el salmón napado con la salsa teriyaki de la sartén, espolvoreado con sésamo tostado, acompañado del brócoli salteado."
       ],
       "batch_cooking_notes": "Se conserva en la nevera en un recipiente hermético hasta 2 días, ya que el pescado es delicado. Recalienta suavemente en sartén o microondas a baja potencia para que el salmón no se seque. No se recomienda congelar una vez cocinado, ya que el salmón pierde textura; mejor prepararlo con un margen de un par de días.",
-      "image_url": ""
+      "image_url": "https://images.pexels.com/photos/4409306/pexels-photo-4409306.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     },
     {
       "category": "libre",
@@ -161,7 +161,7 @@
         "Sazona con sal al gusto, retira la hoja de laurel y deja reposar 5 minutos antes de servir."
       ],
       "batch_cooking_notes": "Es un plato ideal para batch cooking: se conserva en la nevera hasta 4-5 días en un recipiente hermético y mejora de sabor de un día para otro. Congela muy bien hasta 3 meses en raciones individuales; descongela en la nevera la noche antes y recalienta a fuego suave o en microondas, añadiendo un poco de agua si ha espesado demasiado.",
-      "image_url": ""
+      "image_url": "https://images.pexels.com/photos/6086414/pexels-photo-6086414.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
     }
   ]
 }
