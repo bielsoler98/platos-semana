@@ -65,16 +65,20 @@ function renderDish(dish) {
     stepsList.appendChild(li);
   });
 
-  const img = node.querySelector(".dish-image");
+  // The image URL is never fetched or validated server-side, so a broken or
+  // unreachable one is expected occasionally — hide it rather than showing a
+  // broken-image icon.
+  const thumb = node.querySelector(".dish-thumb");
+  const hero = node.querySelector(".dish-image");
   if (dish.image_url) {
-    // The image URL is never fetched or validated server-side, so a broken
-    // or unreachable one is expected occasionally — hide it rather than
-    // showing a broken-image icon.
-    img.addEventListener("error", () => img.remove(), { once: true });
-    img.src = dish.image_url;
-    img.alt = dish.name || "";
+    [thumb, hero].forEach((img) => {
+      img.addEventListener("error", () => img.remove(), { once: true });
+      img.src = dish.image_url;
+      img.alt = dish.name || "";
+    });
   } else {
-    img.remove();
+    thumb.remove();
+    hero.remove();
   }
 
   return node;

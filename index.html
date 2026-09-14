@@ -23,14 +23,15 @@
   <template id="dish-template">
     <details class="dish">
       <summary class="dish-summary">
-        <h2 class="dish-name"></h2>
+        <img class="dish-thumb" alt="">
+        <div class="dish-summary-text">
+          <span class="dish-category"></span>
+          <h2 class="dish-name"></h2>
+        </div>
         <span class="dish-chevron" aria-hidden="true"></span>
       </summary>
       <div class="dish-content">
-        <div class="dish-tag">
-          <span class="dish-dot"></span>
-          <span class="dish-category"></span>
-        </div>
+        <img class="dish-image" alt="">
         <p class="dish-description"></p>
         <div class="dish-meta">
           <span class="dish-time"></span>
@@ -47,7 +48,6 @@
             <ol class="steps-list"></ol>
           </div>
         </div>
-        <img class="dish-image" alt="">
       </div>
     </details>
   </template>
